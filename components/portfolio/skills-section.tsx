@@ -4,23 +4,18 @@ import { Text } from './text'
 
 export function SkillsSection() {
   return (
-    <Section id="skills" title="Toolkit" lede="Grouped by the kind of problem each one helps me solve.">
-      <dl className="divide-y divide-border border-y border-border">
+    <Section id="skills" index="03" title="Skills">
+      <dl className="grid gap-px border border-border bg-border sm:grid-cols-2">
         {skills.map((group, index) => (
-          <div key={index} className="grid items-baseline gap-2 py-5 sm:grid-cols-[11rem_1fr] sm:gap-8">
-            <dt className="text-sm text-muted-foreground">
+          <div key={index} className="bg-background p-5">
+            <dt className="text-xs font-medium uppercase tracking-wider text-primary">
               <Text>{group.category}</Text>
             </dt>
-            <dd className="font-serif text-xl leading-snug md:text-2xl">
+            <dd className="mt-2 text-sm leading-relaxed">
               {group.skills.map((skill, i) => (
                 <span key={i}>
                   <Text>{skill}</Text>
-                  {i < group.skills.length - 1 && (
-                    <span aria-hidden="true" className="mx-2 font-sans font-light text-primary/50">
-                      /
-                    </span>
-                  )}
-                  {i < group.skills.length - 1 && <span className="sr-only">,</span>}
+                  {i < group.skills.length - 1 && <span className="text-muted-foreground">{' · '}</span>}
                 </span>
               ))}
             </dd>

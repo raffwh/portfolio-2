@@ -4,7 +4,7 @@ import { Text } from './text'
 const NAV_ITEMS = [
   { href: '#projects', label: 'Projects' },
   { href: '#experience', label: 'Experience' },
-  { href: '#skills', label: 'Toolkit' },
+  { href: '#skills', label: 'Skills' },
   { href: '#contact', label: 'Contact' },
 ]
 
@@ -30,7 +30,6 @@ export function SiteHeader() {
           </ul>
         </nav>
       </div>
-      <div aria-hidden="true" className="reading-progress absolute inset-x-0 -bottom-px h-0.5 bg-primary" />
     </header>
   )
 }
