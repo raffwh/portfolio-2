@@ -43,12 +43,22 @@ export type Project = {
   evidenceNote: string | null
 }
 
+/**
+ * Decimal years used only to draw the timeline chart.
+ * 2023 = January 2023, 2023.5 = July 2023. Use `to: null` for ongoing.
+ */
+export type Period = {
+  from: number
+  to: number | null
+}
+
 export type ExperienceItem = {
   role: string
   organization: string
   location: string
   start: string
   end: string
+  period: Period
   highlights: string[]
 }
 
@@ -62,6 +72,7 @@ export type EducationItem = {
   institution: string
   dates: string
   status: string
+  period: Period
   note: string | null
 }
 
@@ -187,6 +198,7 @@ export const experience: ExperienceItem[] = [
     location: '[City / Remote]',
     start: '[Mon Year]',
     end: '[Mon Year or Present]',
+    period: { from: 2023, to: 2025.6 },
     highlights: [
       '[Main responsibility relevant to the roles you are targeting]',
       '[Second responsibility — scope, stakeholders, or systems you owned]',
@@ -198,6 +210,7 @@ export const experience: ExperienceItem[] = [
     location: '[City / Remote]',
     start: '[Mon Year]',
     end: '[Mon Year]',
+    period: { from: 2021.5, to: 2023 },
     highlights: ['[Main responsibility]', '[Second responsibility]'],
   },
   {
@@ -206,6 +219,7 @@ export const experience: ExperienceItem[] = [
     location: '[City / Remote]',
     start: '[Mon Year]',
     end: '[Mon Year]',
+    period: { from: 2020.5, to: 2021.3 },
     highlights: ['[Main responsibility]'],
   },
 ]
@@ -223,6 +237,7 @@ export const education: EducationItem[] = [
     institution: '[University name]',
     dates: '[Year – Year]',
     status: 'In progress',
+    period: { from: 2025.7, to: null },
     note: '[Relevant modules or thesis topic — optional]',
   },
   {
@@ -230,6 +245,7 @@ export const education: EducationItem[] = [
     institution: '[University name]',
     dates: '[Year – Year]',
     status: 'Completed',
+    period: { from: 2017.7, to: 2021.5 },
     note: null,
   },
 ]

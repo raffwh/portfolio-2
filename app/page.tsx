@@ -1,5 +1,5 @@
 import { profile } from '@/content/portfolio'
-import { EducationContactSection } from '@/components/portfolio/education-contact-section'
+import { ContactSection } from '@/components/portfolio/contact-section'
 import { ExperienceSection } from '@/components/portfolio/experience-section'
 import { Introduction } from '@/components/portfolio/introduction'
 import { ProjectsSection } from '@/components/portfolio/projects-section'
@@ -22,7 +22,7 @@ export default function Page() {
         <ProjectsSection />
         <ExperienceSection />
         <SkillsSection />
-        <EducationContactSection />
+        <ContactSection />
       </main>
       <footer className="border-t border-border">
         <div className="mx-auto flex max-w-6xl flex-wrap justify-between gap-2 px-5 py-6 text-xs text-muted-foreground md:px-8">
