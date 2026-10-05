@@ -15,7 +15,7 @@ export function ProjectsSection() {
   const visible = showAll ? [...featured, ...remaining] : featured
 
   return (
-    <Section id="projects" index="01" title="Selected Projects">
+    <Section id="projects" title="Selected Projects">
       <p className="mb-8 max-w-2xl text-sm leading-relaxed text-muted-foreground">
         Work, personal, and academic projects. Each entry separates my own contribution from the
         team&apos;s. Work projects reflect my own account and are not endorsed by the employer.
